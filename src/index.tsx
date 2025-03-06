@@ -1,8 +1,8 @@
 import { createRoot } from 'react-dom/client';
-import { App } from './app/App';
 import { BrowserRouter } from 'react-router-dom';
 // import StoreProvider from 'app/provider/StoreProvider/ui/StoreProvider';
 import { ErrorBoundary } from 'app/provider/ErrorBoundary';
+import { App } from './app/App';
 
 const container = document.getElementById('root');
 const root = createRoot(container!);

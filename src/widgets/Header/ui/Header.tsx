@@ -1,6 +1,6 @@
 import classNames from 'shared/lib/classNames/classNames';
-import cls from './Header.module.scss';
 import { useState } from 'react';
+import cls from './Header.module.scss';
 import Basket from './Basket/Basket';
 
 interface HeaderProps {

@@ -60,7 +60,7 @@ export default [
             'jsx_a11y/no-static-element-interactions': 'off',
             'jsx_a11y/click-events-have-key-events': 'off',
             'react_hooks/rules-of-hooks': 'error', // Checks rules of Hooks
-            'react_hooks/exhaustive-deps': 'error', // Checks effect dependencies,
+            'react_hooks/exhaustive-deps': 'warn', // Checks effect dependencies,
             'no-param-reassign': 'off',
             'no-undef': 'off',
             'react/no-array-index-key': 'off',

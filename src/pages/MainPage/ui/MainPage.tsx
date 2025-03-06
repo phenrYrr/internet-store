@@ -1,7 +1,7 @@
 import classNames from 'shared/lib/classNames/classNames';
-import cls from './MainPage.module.scss';
 import Header from 'widgets/Header/ui/Header';
 import Basket from 'widgets/Header/ui/Basket/Basket';
+import cls from './MainPage.module.scss';
 
 interface MainPageProps {
     className?: string;

@@ -1,12 +1,12 @@
 import { ReactNode, memo, useEffect } from 'react';
 import classNames from 'shared/lib/classNames/classNames';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { getProductData, getProductError, getProductIsLoading } from '../model/selectors/getProductData';
 import { useSelector } from 'react-redux';
 import DynamicModuleLoader, { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { Skeleton, Typography, Avatar } from 'antd';
+import { getProductData, getProductError, getProductIsLoading } from '../model/selectors/getProductData';
 import { productReducer } from '../model/slice/productSlice';
 import { productFetch } from '../model/services/productFetch';
-import { Skeleton, Typography, Avatar } from 'antd';
 import cls from './Product.module.scss'
 
 interface ProductProps {
