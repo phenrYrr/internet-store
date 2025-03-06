@@ -1,24 +1,23 @@
 import { FC, ReactNode, useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
-import { ReduxStoreWithManager, StateSchemaKey } from 'app/provider/StoreProvider/config/StateSchema';
+import {
+    ReduxStoreWithManager,
+    StateSchemaKey,
+} from 'app/provider/StoreProvider/config/StateSchema';
 import { Reducer } from '@reduxjs/toolkit';
 
 export type ReducersList = {
     [name in StateSchemaKey]?: Reducer;
-}
+};
 
 interface DynamicModuleLoaderProps {
-    children?: ReactNode
+    children?: ReactNode;
     reducers: ReducersList;
     removeAfterUnmount?: boolean;
 }
 
-export default function DynamicModuleLoader (props: DynamicModuleLoaderProps) {
-    const {
-        children,
-        reducers,
-        removeAfterUnmount,
-    } = props;
+export default function DynamicModuleLoader(props: DynamicModuleLoaderProps) {
+    const { children, reducers, removeAfterUnmount } = props;
 
     const store = useStore() as ReduxStoreWithManager;
     const dispatch = useDispatch();
@@ -39,9 +38,5 @@ export default function DynamicModuleLoader (props: DynamicModuleLoaderProps) {
         };
     }, []);
 
-    return (
-        <>
-            {children}
-        </>
-    );
-};
+    return <>{children}</>;
+}

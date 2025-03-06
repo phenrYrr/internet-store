@@ -10,7 +10,7 @@ export const productFetch = createAsyncThunk<
     const { extra, rejectWithValue } = thunkApi;
 
     try {
-        const response = await extra.api.get(`/catalog/${productId}`);
+        const response = await extra.api.get(`/${productId}`);
 
         if (!response.data) {
             throw new Error();

@@ -1,9 +1,10 @@
+import Header from 'widgets/Header/ui/Header';
 import AppRouter from './router/ui/AppRouter';
 import './styles/index.scss';
 
 export function App() {
     return (
-        <div>
+        <div className="container">
             <AppRouter />
         </div>
     );

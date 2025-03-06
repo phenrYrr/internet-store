@@ -1,18 +1,19 @@
 :root {
     // Themes
 
-    --bg-color-black: #000;
+    --bg-color: #ffffffa0;
+    --bg-color-gray: #e5e5e5;
     --primary-color-w: #ff5e00;
     --text-color-w: #FFF;
     --secondary-color-w: #fd9540;
     --bg-color-white: #fff;
     --primary-color-b: #f78432;
-    --text-color-b: rgb(0 0 0 / 81%);
+    --text-color-b: #000000cf;
     --secondary-color-b: #ff1c1c;
 
   // header-height ~
   --index: calc(0.83vh + 0.87vw);
-  --header-height: calc(var(--index) * 5);
+  --header-height: calc(var(--index) * 3);
 
   // scroll size
   --scroll-size: calc(var(--index) * 0.4);
@@ -28,7 +29,8 @@
   --font-l: 400 var(--font-size-l) / 115% var(--font-family-main);
 
   // btn
-  --btn-padding: 0.6em 0.8em;
+  --btn-padding-l: 0.6em 0.8em;
+  --btn-padding-m: 0.8em 1em;
   --btn-border-radius: 0.5em;
 
   // ---------
