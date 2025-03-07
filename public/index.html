@@ -7,14 +7,13 @@
 </head>
 <body>
     <div id="root"></div>
-</body>
-<!-- <script>
-    document.addEventListener('DOMContentLoaded', () => { 
-      var app = new window.App();
-      if (app && app.start) {
-        app.start({ dealers: ['id1', 'id2'] });
-      }
-    });
-  </script> -->
 
+    <script>
+      document.addEventListener('DOMContentLoaded', () => { 
+        if (window.App && window.App.start) {
+          window.App.start({ dealers: ['id1', 'id2'] });
+        }
+      });
+    </script>
+</body>
 </html>

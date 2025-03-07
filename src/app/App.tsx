@@ -1,4 +1,3 @@
-import Header from 'widgets/Header/ui/Header';
 import AppRouter from './router/ui/AppRouter';
 import './styles/index.scss';
 

@@ -7,15 +7,18 @@ export const productFetch = createAsyncThunk<
     string,
     ThunkConfig<string>
 >('Product/fetchProduct', async (productId, thunkApi) => {
-    const { extra, rejectWithValue } = thunkApi;
+    //@ts-ignore
+    const { api, rejectWithValue } = thunkApi.extra;
 
     try {
-        const response = await extra.api.get(`/${productId}`);
+        const response = await api.endpoints.getGoods.initiate(`/${productId}`);
 
+        // @ts-ignore
         if (!response.data) {
             throw new Error();
         }
 
+        // @ts-ignore
         return response.data;
     } catch (e) {
         console.log(e);

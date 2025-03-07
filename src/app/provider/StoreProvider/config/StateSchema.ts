@@ -7,8 +7,13 @@ import {
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
 import { productSchema } from 'entities/Product/model/types/productSchema';
+import { MainPageSchema } from 'pages/MainPage/model/types/mainPageSchema';
+import { goodsApi } from 'shared/api/api';
+
 export interface StateSchema {
     product: productSchema;
+    MainPage: MainPageSchema;
+    [goodsApi.reducerPath]: ReturnType<typeof goodsApi.reducer>;
 }
 
 export type StateSchemaKey = keyof StateSchema;
@@ -31,7 +36,7 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 }
 
 export interface ThunkExtraArg {
-    api: AxiosInstance;
+    api: typeof goodsApi;
 }
 
 export interface ThunkConfig<T> {
